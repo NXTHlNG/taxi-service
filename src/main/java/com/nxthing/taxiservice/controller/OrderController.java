@@ -15,7 +15,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     public Order createOrder(@RequestParam String customer,
                              @RequestParam CarType type,
                              @RequestParam int capacity,
