@@ -7,7 +7,7 @@ import com.nxthing.taxiservice.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("order")
+@RequestMapping("/order")
 public class OrderController {
     private final OrderService orderService;
 
@@ -15,7 +15,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping("create")
+    @GetMapping("/create")
     public Order createOrder(@RequestParam String customer,
                              @RequestParam CarType type,
                              @RequestParam int capacity,
